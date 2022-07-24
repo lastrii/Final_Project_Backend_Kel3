@@ -1,0 +1,29 @@
+
+GET http://localhost:8000/
+
+###
+POST http://localhost:8000/api/user/register
+Content-Type: application/json
+
+{
+    "username": "testing",
+    "email": "testing@gmail.com",
+    "password": "testing123",
+    "confPassword": "testing123" 
+}
+
+###
+POST http://localhost:8000/api/user/login
+Content-Type: application/json
+
+{
+    "email": "testing@gmail.com",
+    "password": "testing123"
+}
+
+###
+GET http://localhost:8000/api/user/token
+
+###
+GET http://localhost:8000/api/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6InRlc3RpbmcxIiwiZW1haWwiOiJ0ZXN0aW5nMUBnbWFpbC5jb20iLCJpYXQiOjE2NTY5NDI0OTAsImV4cCI6MTY1Njk0NjA5MH0.RYNhOTQz6ttmf35I6nDOWeeqWWGUF4pZKgdrZ1Kn2mM
